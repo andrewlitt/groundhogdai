@@ -1,0 +1,39 @@
+.searchSection {
+  background: #ffdfab;
+  border-radius: 3px;
+  overflow-x: hidden;
+  max-width: 500px;
+}
+
+.resultsSection {
+  overflow-y: scroll;
+  max-height: 300px;
+  max-width: 500px;
+}
+
+.searchBar input {
+  width: 500px;
+  max-width: 500px;
+
+  outline: none;
+  -webkit-appearance: none;
+
+  height: 40px;
+
+  border: 1px #ffedcd solid;
+  border-radius: 3px;
+
+  font-family: 'Open Sans', serif;
+  font-weight: lighter;
+  font-size: 1em;
+
+  padding: 3px;
+  padding-left: 7px;
+  padding-right: 7px;
+
+  overflow-x: scroll;
+}
+
+.searchBar input:focus {
+  border: 1px #ffdfab solid;
+}
