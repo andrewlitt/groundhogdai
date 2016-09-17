@@ -19,10 +19,13 @@ export class Container extends React.Component {
     return (
         <div className={styles.container}>
           <Header />
-          <Sidebar />
 
-          <div className={styles.content}>
-            {children}
+          <div className={styles.flexContainer}>
+            <Sidebar />
+
+            <div className={styles.content}>
+              {children}
+            </div>
           </div>
         </div>
     );
