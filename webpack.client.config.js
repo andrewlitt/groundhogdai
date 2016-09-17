@@ -15,7 +15,7 @@ const modules = join(root, 'node_modules');
 const dest    = join(root, 'www');
 
 var config = hjsConfig({
-  devtool: 'source-maps',
+  devtool: 'source-map',
   hostname: 'localhost',
   in: './src/app.js',
   out: './www',
