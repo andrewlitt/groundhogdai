@@ -1,3 +1,9 @@
 :root {
-  /* Global file can be imported and included in files */
+    /* Colour Scheme */
+    --main-color: #3081E8;
+    --accent: #FFAB22;
+    --white: #ffffff;
+    --grey: #263344;
+    /* Fonts */
+    /* Constants */
 }

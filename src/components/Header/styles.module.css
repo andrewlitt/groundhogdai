@@ -1,17 +1,20 @@
+@import "../../styles/base.css";
+
 .header {
   position: fixed;
   width: 100vw;
-  height: 75px;
+  height: 100px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: grey;
+  background: var(--white);
+  padding: 30px;
 }
 
 .header h1 {
-  color: blue;
-  font-family: monospace;
-  font-size: 1.75em;
+  color: var(--grey);
+  font-family:"Bree Serif";
+  font-size: 4.0em;
 }
