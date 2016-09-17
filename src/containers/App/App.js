@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, hashHistory } from 'react-router';
+import { Router } from 'react-router';
 
 class App extends React.Component {
   constructor() {

@@ -1,6 +1,5 @@
 .header {
-  position: fixed;
-  width: 100vw;
+  flex: 1 100%;
   height: 75px;
 
   display: flex;
@@ -8,10 +7,4 @@
   justify-content: center;
 
   background: grey;
-}
-
-.header h1 {
-  color: blue;
-  font-family: monospace;
-  font-size: 1.75em;
 }

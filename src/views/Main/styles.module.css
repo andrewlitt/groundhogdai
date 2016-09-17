@@ -1,0 +1,19 @@
+.container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  /*justify-content: space-around;*/
+
+  background: green;
+}
+
+.content {
+  flex: 4;
+  background: pink;
+
+  height: 100%;
+}
