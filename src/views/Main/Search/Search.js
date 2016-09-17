@@ -1,5 +1,5 @@
 import React from 'react';
-
+import SearchBar from './SearchBar/SearchBar';
 import styles from './styles.module.css';
 
 export class Search extends React.Component {
@@ -13,7 +13,7 @@ export class Search extends React.Component {
           <h1>Type in an upcoming movie to see if it will be a hit!</h1>
 
           <div className={styles.searchBar}>
-            <input type="text" autoFocus placeholder={'Deepwater Horizon (2016)'} />
+            <SearchBar />
           </div>
         </div>
     );
