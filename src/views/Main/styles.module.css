@@ -10,8 +10,8 @@
 }
 
 .content {
-  flex: 4;
-  background: pink;
+  flex: 3;
+  background: white;
 
   height: 100%;
 }
