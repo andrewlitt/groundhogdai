@@ -2,14 +2,9 @@
 
 .sidebar {
   flex: 1;
-<<<<<<< Updated upstream
+
   background: var(--white);
   height: 100%;
   border: 1px solid var(--grey);
   border-radius: 10px;
-=======
-  background: yellow;
-
-  /*height: 100%;*/
->>>>>>> Stashed changes
 }
