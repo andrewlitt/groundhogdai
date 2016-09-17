@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from 'components/Header/Header';
 
 import styles from './styles.module.css';
 
@@ -8,18 +9,9 @@ export class Container extends React.Component {
   }
 
   render() {
-    let children = null;
-
-    if (this.props.children) {
-      children = React.cloneElement(this.props.children, {});
-    }
-
     return (
-        <div>
-          <div>
-            <h1>Test</h1>
-            {children}
-          </div>
+        <div className={styles.container}>
+          <Header />
         </div>
     );
   }

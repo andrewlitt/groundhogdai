@@ -7,5 +7,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
+
+    padding: 0px;
+    margin: 0px;
 }

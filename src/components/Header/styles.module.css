@@ -1,0 +1,17 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: grey;
+}
+
+.header h1 {
+  color: blue;
+  font-family: monospace;
+  font-size: 1.75em;
+}

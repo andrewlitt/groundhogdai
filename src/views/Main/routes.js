@@ -6,7 +6,7 @@ import Container from './Container';
 export const mainRoutes = () => {
   return (
     <Route path="/dashboard" component={Container}>
-
+  
     </Route>
   )
 }
