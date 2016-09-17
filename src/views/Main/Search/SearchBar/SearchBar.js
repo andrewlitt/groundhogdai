@@ -18,7 +18,6 @@ export class SearchBar extends React.Component {
   }
 
   handleChange(e) {
-    console.log(e.target.value.length);
     if(e.target.value.length < 1) {
       this.setState({showingResults: false});
       return;

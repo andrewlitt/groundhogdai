@@ -13,7 +13,8 @@
     "start": "node server.bundle.js",
     "start:local": "node ./dist/server.bundle.js",
     "deploy": "npm run clean && npm run copy && npm run build && cd dist && gcloud app deploy -q && cd ..",
-    "serve:local": "npm run clean && npm run copy && npm run build && npm run start:local"
+    "serve:local": "npm run clean && npm run copy && npm run build && npm run start:local",
+    "manMeat": "set NODE_ENV=development && webpack-dev-server --config webpack.client.config.js"
   },
   "repository": {
     "type": "git",

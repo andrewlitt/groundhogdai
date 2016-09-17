@@ -13,9 +13,13 @@ export class Result extends React.Component {
 
   render() {
     let imgSrc = 'https://image.tmdb.org/t/p/w45_and_h67_bestv2' + this.props.data.poster;
+    var noImage = require('images/qmark.png');
     let title = this.props.data.title;
     let overview = this.props.data.overview;
     let date = this.props.data.date;
+
+    if(this.props.data.poster === null)
+      imgSrc = noImage;
 
     return (
       <div className={styles.result} onClick={(e) => this.click(e)}>
