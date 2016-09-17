@@ -9,7 +9,6 @@ export class Upcoming extends React.Component {
   }
 
   render() {
-    console.log("fuck");
     return (
         <ul className={styles.upcoming}>
             {this.props.items.map((item, i) => {
