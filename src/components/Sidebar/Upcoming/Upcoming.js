@@ -19,12 +19,11 @@ export class Upcoming extends React.Component {
                 <th>Predicted Rating</th>
             </tr>
               {
-                ((self) => {
-                  console.log(self);
-                  if (self.props.items && self.props.items.length > 0){
+                (() => {
+                  if (this.props.items && this.props.items.length > 0){
                     console.log('items');
-                    console.log(self.props.items);
-                    self.props.items.map((item, i) => {
+                    console.log(this.props.items);
+                    this.props.items.map((item, i) => {
                       console.log(item.title, item.releaseDate, item.revenue);
                       console.log(i);
                         return <tr key={i}>
@@ -36,7 +35,7 @@ export class Upcoming extends React.Component {
                   } else {
                     return <tr><td></td><td></td><td></td></tr>;
                   }
-              })(this)
+                })()
               }
             </tbody>
         </table>
