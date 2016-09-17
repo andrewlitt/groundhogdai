@@ -9,12 +9,18 @@
     "build:server": "webpack --config webpack.server.config.js",
     "build": "npm run build:client && npm run build:server",
     "copy:root": "cp ./app.yaml ./dist/app.yaml && cp ./package.json ./dist/package.json",
+    "copy:root-windows": "copy .\\app.yaml .\\dist\\app.yaml && copy .\\package.json .\\dist\\package.json",
     "copy": "mkdir -p ./dist/public && npm run copy:root && cp ./src/public/index.html ./dist/public",
+    "copy:windows": "md .\\dist\\public && npm run copy:root-windows && copy .\\src\\public\\index.html .\\dist\\public",
     "start": "node server.bundle.js",
     "start:local": "node ./dist/server.bundle.js",
     "deploy": "npm run clean && npm run copy && npm run build && cd dist && gcloud app deploy -q && cd ..",
     "serve:local": "npm run clean && npm run copy && npm run build && npm run start:local",
+<<<<<<< HEAD
     "manMeat": "set NODE_ENV=development && webpack-dev-server --config webpack.client.config.js"
+=======
+    "serve:local-windows": "npm run clean && npm run copy:windows && npm run build && npm run start:local"
+>>>>>>> ed636f1f40f50100ba7ab3e71966de3c8d042afe
   },
   "repository": {
     "type": "git",

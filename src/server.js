@@ -12,5 +12,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(router);
 
 app.listen(port, () => {
-	console.log(`Movie mystic listening on port ${port}`);
+	console.log(`Movie Mystic listening on port ${port}`);
 });
