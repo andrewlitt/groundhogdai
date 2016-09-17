@@ -9,8 +9,12 @@ export class Search extends React.Component {
 
   render() {
     return (
-        <div className={styles.container}>
-          <p>Search here</p>
+        <div className={styles.search}>
+          <h1>Type in an upcoming movie to see if it will be a hit!</h1>
+
+          <div className={styles.searchBar}>
+            <input type="text" autoFocus placeholder={'Deepwater Horizon (2016)'} />
+          </div>
         </div>
     );
   }
