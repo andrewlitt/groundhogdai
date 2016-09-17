@@ -5,6 +5,17 @@
 
   background: var(--white);
   height: 100%;
-  border: 1px solid var(--grey);
-  border-radius: 10px;
+}
+
+.sidebar h1{
+  font-size: 1.4em;
+  font-family: "Bree Serif";
+  text-align: center;
+  padding: 3px;
+}
+
+.sidebar ul{
+  text-decoration: none;
+  list-style: none;
+  font-family: "Open Sans";
 }

@@ -12,12 +12,13 @@ const isDev = NODE_ENV === 'development';
 const root    = resolve(__dirname);
 const src     = join(root, 'src');
 const modules = join(root, 'node_modules');
-const dest    = join(root, 'dist/public');
+const dest    = join(root, 'www');
 
 var config = hjsConfig({
+  devtool: 'source-maps',
   hostname: 'localhost',
   in: './src/app.js',
-  out: './dist/public',
+  out: './www',
   clearBeforeBuild: true,
   devServer: {
     hot: false,
@@ -29,7 +30,7 @@ var config = hjsConfig({
         // Add Google Fonts and FA to on the fly generated HTML
         // You can add like this intoi the head tag below VVVVVV
         // <link href="https://fonts.googleapis.com/css?family=Open+Sans|Crimson+Text" rel="stylesheet" type="text/css"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        head:'<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Patua+One|Open+Serif" rel="stylesheet">',
+        head:'<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Patua+One|Open+Sans" rel="stylesheet">',
         title: 'Movie Mystic',
         metaTags: {
           'name': 'Movie Mystic',

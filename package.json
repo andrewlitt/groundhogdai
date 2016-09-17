@@ -8,9 +8,12 @@
     "build:client": "set NODE_ENV=production && webpack --config webpack.client.config.js",
     "build:server": "webpack --config webpack.server.config.js",
     "build": "npm run build:client && npm run build:server",
-    "copy": "md .\\dist\\public && copy .\\src\\public\\index.html .\\dist\\public",
-    "start": "node ./dist/server.bundle.js",
-    "serve": "npm run clean && npm run copy && npm run build && npm run start"
+    "copy:root": "cp ./app.yaml ./dist/app.yaml && cp ./package.json ./dist/package.json",
+    "copy": "mkdir -p ./dist/public && npm run copy:root && cp ./src/public/index.html ./dist/public",
+    "start": "node server.bundle.js",
+    "start:local": "node ./dist/server.bundle.js",
+    "deploy": "npm run clean && npm run copy && npm run build && cd dist && gcloud app deploy -q && cd ..",
+    "serve:local": "npm run clean && npm run copy && npm run build && npm run start:local"
   },
   "repository": {
     "type": "git",
@@ -26,7 +29,8 @@
     "express": "^4.14.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-router": "^2.4.1"
+    "react-router": "^2.4.1",
+    "superagent": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
