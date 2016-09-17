@@ -1,6 +1,9 @@
+@import "../../styles/base.css";
+
 .sidebar {
   flex: 1;
-  background: yellow;
-
+  background: var(--white);
   height: 100%;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
 }

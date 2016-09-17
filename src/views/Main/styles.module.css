@@ -7,8 +7,6 @@
   flex-flow: row wrap;
   align-items: stretch;
   /*justify-content: space-around;*/
-
-  background: green;
 }
 
 .content {
