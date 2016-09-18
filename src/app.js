@@ -4,8 +4,11 @@ import ReactDOM from 'react-dom';
 import './app.css';
 
 import App from 'containers/App/App';
+import Container from './views/Main/Container';
+import Search from './views/Main/Search/Search';
+import Movie from './views/Main/Movie/Movie';
 
-import {hashHistory} from 'react-router';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 import makeRoutes from './routes';
 
 const routes = makeRoutes();

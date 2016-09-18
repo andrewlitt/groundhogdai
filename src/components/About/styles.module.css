@@ -1,5 +1,5 @@
 @import "../../styles/base.css";
 
 .about{
-  flex: 1;
+  width: 50%;
 }

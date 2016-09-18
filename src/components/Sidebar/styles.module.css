@@ -1,16 +1,13 @@
 @import "../../styles/base.css";
 
 .sidebar {
-  flex: 1;
-
   background: var(--white);
-  height: 100%;
+  width: 50%;
 }
 
 .sidebar h1{
   font-size: 1.4em;
   font-family: "Bree Serif";
-  text-align: center;
   padding: 3px;
 }
 

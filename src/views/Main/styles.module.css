@@ -1,28 +1,12 @@
 .container {
-  position: absolute;
   width: 100%;
   height: 100%;
-}
-
-.flexContainer {
-  position: absolute;
-  width: 100%;
-  height: calc(100% - 75px);
-
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-}
-
-.content {
-  flex: 3;
-  background: white;
-  height: 100%;
 }
 
 .info {
-  flex: 2;
-
+  flex: 0 1 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
