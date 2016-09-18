@@ -97,8 +97,8 @@ export class Movie extends React.Component {
 
           <div className={styles.textFlex}>
             <h1>{this.state.data.title}</h1>
-            <h2>{this.state.data.overview}</h2>
             <h3>{this.state.data.releaseDate}</h3>
+            <h2>{this.state.data.overview}</h2>
           </div>
 
           <div className={styles.ratingFlex}>

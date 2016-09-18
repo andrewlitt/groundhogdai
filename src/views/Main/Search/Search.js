@@ -20,8 +20,8 @@ export class Search extends React.Component {
           <img className={styles.logoPic} src={logo}/>
 
           <div className={styles.easterEgg}>
-            <p>May be named after the groundhog we saw at 7:30pm, the culturally
-            significant movie and so we could say Groundhog, 'da AI.</p>
+            <p>May be named after the groundhog we saw at 7 30pm, the culturally
+            significant movie and so we could say Groundhog, da AI.</p>
           </div>
 
           {/* <div className={styles.aboutTag}>

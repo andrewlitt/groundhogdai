@@ -43,8 +43,10 @@ export class Sidebar extends React.Component {
 
   render() {
     return <div className={styles.sidebar}>
-          <h1>Upcoming Movies</h1>
-          <Upcoming items={this.state.movieData} />
+              <div className={styles.sidebarContent}>
+                  <h1>Upcoming Movies</h1>
+                  <Upcoming items={this.state.movieData} />
+              </div>
         </div>;
   }
 }
