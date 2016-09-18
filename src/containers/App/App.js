@@ -12,7 +12,7 @@ class App extends React.Component {
 
   render () {
     return (
-      <div style={{ height: '100vh' }}>
+      <div style={{ height: '100vh'}}>
         <Router
           routes={this.props.routes}
           history={this.props.history}

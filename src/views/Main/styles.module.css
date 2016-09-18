@@ -1,11 +1,15 @@
+@import "../../styles/base.css";
+
+
 .container {
   position: fixed;
   top: 75px;
   width: 100%;
-  height: calc(100% - 75px);
+  height: 100%;
 
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 
 .children {
@@ -19,4 +23,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.info h1{
+  font-size: 1.6em;
+  font-family: "Bree Serif";
+  padding: 3px 0px;
+  color: var(--grey);
 }

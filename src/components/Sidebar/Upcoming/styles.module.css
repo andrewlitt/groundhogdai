@@ -16,15 +16,19 @@ th{
   text-align: center;
 }
 
-#title{
-  text-align: left;
+.title{
+
 }
 
-#date{
-  text-align: center;
+.releaseDate{
+
 }
 
-#rating{
+.revenue{
+  text-align: right;
+}
+
+.rating{
   text-align: right;
 }
 
