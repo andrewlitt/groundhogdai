@@ -21,6 +21,7 @@
 .poster {
   flex: 1;
   text-align: center;
+  margin-left: 50px;
   /*background: red;*/
 }
 

@@ -2,8 +2,6 @@ import React from 'react';
 import styles from './styles.module.css';
 import {hashHistory} from 'react-router';
 
-import Rating from 'components/Rating/Rating';
-
 // this.props.params.id will have movieID
 // post @ https://image.tmdb.org/t/p/w600_and_h900_bestv2/ + url
 
@@ -26,6 +24,8 @@ export class Movie extends React.Component {
       result.json().then((json) => {
         temp = {
           id: this.props.params.id,
+          title: json.title,
+          runtime: json.runtime,
           budget: json.budget,
           popularity: json.popularity,
           vote_average: json.vote_average,
@@ -57,6 +57,8 @@ export class Movie extends React.Component {
             }
 
             tempMovie.cast = tempCast;
+
+            console.log(temp);
 
             this.setState({toPass: temp});
             this.setState({data: tempMovie});
@@ -90,10 +92,8 @@ export class Movie extends React.Component {
           </div>
 
           <div className={styles.ratingFlex}>
-            <p>Our rating:</p>
-            <Rating />
-
-            <p>Their rating:</p>
+            <p>Our rating: </p><div className="ourScore">87%</div>
+            <p>Their rating:</p><div className="theirScore">57%</div>
           </div>
         </div>
 
