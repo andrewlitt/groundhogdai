@@ -4,6 +4,8 @@
   display: flex;
   flex-flow: row;
 
+  z-index: 9000;
+
   padding: 20px;
 }
 

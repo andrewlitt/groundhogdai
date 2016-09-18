@@ -16,7 +16,7 @@
 }
 
 .search h1 {
-  margin-top: 50px;
+  margin-top: 85px;
   font-family: 'Open Sans', sans;
   font-weight:bold;
   font-size: 1.5em;
@@ -25,9 +25,24 @@
 .subheading{
   color: white;
 }
+
+.search .easterEgg {
+  font-size: .75em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+  color: var(--main-color);
+
+  margin-top: 20px;
+}
+
+.search .easterEgg:hover {
+  color: #75abf0;
+}
+
 .logoPic {
-  float: left;
   position: absolute;
-  bottom: 0px;
+  bottom: 50px;
+  left: 27px;
   height: 50%;
+  z-index: 1;
 }

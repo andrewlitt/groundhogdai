@@ -25,10 +25,10 @@ export class Container extends React.Component {
               {children}
             </div>
 
-            <div className={styles.info}>
+            {/* <div className={styles.info}>
               <Sidebar />
               <About />
-            </div>
+            </div> */}
         </div>
       </div>
     );

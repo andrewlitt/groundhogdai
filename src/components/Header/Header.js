@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 import styles from './styles.module.css';
 
@@ -11,7 +12,9 @@ export class Header extends React.Component {
 
     return (
         <div className={styles.header}>
-          <h1>Groundhog d.AI</h1>
+          <Link to='/upcoming'>Upcoming</Link>
+          <Link to='/'>Groundhog d.AI</Link>
+          <Link to='/about'>About</Link>
         </div>
     );
   }

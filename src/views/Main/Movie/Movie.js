@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import {hashHistory} from 'react-router';
+import superagent from 'superagent';
 
 // this.props.params.id will have movieID
 // post @ https://image.tmdb.org/t/p/w600_and_h900_bestv2/ + url
@@ -11,7 +12,9 @@ export class Movie extends React.Component {
 
     this.state = {
       toPass: {},
-      data: {}
+      data: {},
+      projectedRevenue: 0,
+      actualRevenue: 0
     }
   }
 
@@ -58,10 +61,17 @@ export class Movie extends React.Component {
 
             tempMovie.cast = tempCast;
 
-            console.log(temp);
-
             this.setState({toPass: temp});
             this.setState({data: tempMovie});
+
+            console.log(this.state.toPass);
+            superagent.post('http://a5b7d24e.ngrok.io/search').send(this.state.toPass).end((err, response, body) => {
+              console.log('Post resonse', response);
+              console.log('Error', err);
+              console.log('Body', body);
+
+              console.log(response.text);
+            });
           });
         });
       });
@@ -92,11 +102,12 @@ export class Movie extends React.Component {
           </div>
 
           <div className={styles.ratingFlex}>
-            <p>Our rating: </p><div className="ourScore">87%</div>
-            <p>Their rating:</p><div className="theirScore">57%</div>
+            <p>Our projected revenue for this movie: </p>
+            <h4>{this.state.projectedRevenue}</h4>
+            <p>The actual revenue:</p>
+            <h4>{this.state.actualRevenue}</h4>
           </div>
         </div>
-
       </div>
     );
   }
