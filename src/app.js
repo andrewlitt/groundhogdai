@@ -4,13 +4,24 @@ import ReactDOM from 'react-dom';
 import './app.css';
 
 import App from 'containers/App/App';
+import Container from './views/Main/Container';
+import Search from './views/Main/Search/Search';
+import Movie from './views/Main/Movie/Movie';
 
-import {browserHistory} from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import makeRoutes from './routes';
 
 const routes = makeRoutes();
 
 // Get the node created from the WebPack HTML gen to mount our react app to
-const mountNode = document.querySelector('#root');
-
-ReactDOM.render(<App history={browserHistory} routes={routes} />, mountNode);
+console.log(ReactDOM.render);
+ReactDOM.render(
+  <Router history={browserHistory} >
+    <Route path="/" component={App} >
+      <Route path="" component={Container} >
+        <IndexRoute component={Search} />
+        <Route path="movie/:id" component={Movie} />
+      </Route>
+    </Route>
+  </Router>, 
+  document.getElementById('root'));
