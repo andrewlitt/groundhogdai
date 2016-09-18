@@ -8,7 +8,9 @@ export class Sidebar extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      movieData:[]
+    };
   }
 
   componentDidMount() {
@@ -16,7 +18,7 @@ export class Sidebar extends React.Component {
         result.json().then(json => {
         //console.log(json);
         this.setState({
-          data: json
+          movieData: json
         });
       });
     });
@@ -40,12 +42,10 @@ export class Sidebar extends React.Component {
 
 
   render() {
-    return (
-        <div className={styles.sidebar}>
+    return <div className={styles.sidebar}>
           <h1>Upcoming Movies</h1>
-          <Upcoming items={this.state.data} />
-        </div>
-    );
+          <Upcoming items={this.state.movieData} />
+        </div>;
   }
 }
 
