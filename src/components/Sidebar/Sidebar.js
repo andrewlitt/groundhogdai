@@ -14,7 +14,7 @@ export class Sidebar extends React.Component {
   }
 
   componentDidMount() {
-      fetch('http://10.21.227.72:3000/top10').then((result) =>{
+      fetch('http://146.148.60.217/top10').then((result) =>{
         result.json().then(json => {
         //console.log(json);
         this.setState({
