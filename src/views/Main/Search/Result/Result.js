@@ -1,4 +1,5 @@
 import React from 'react';
+import { browserHistory } from 'react-router'
 
 import styles from './styles.module.css';
 
@@ -8,7 +9,7 @@ export class Result extends React.Component {
   }
 
   click(e) {
-    console.log('doing movie', this.props.data.id);
+    browserHistory.push('/movie/' + this.props.data.id)
   }
 
   render() {
