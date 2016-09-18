@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from 'react-router';
+import {  } from 'react-router';
 
 class App extends React.Component {
   constructor() {
@@ -13,10 +13,7 @@ class App extends React.Component {
   render () {
     return (
       <div style={{ height: '100%' }}>
-        <Router
-          routes={this.props.routes}
-          history={this.props.history}
-        />
+        {this.props.children}
       </div>
     )
   }
