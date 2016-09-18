@@ -1,5 +1,5 @@
 import React from 'react';
-import { browserHistory } from 'react-router'
+import { hashHistory } from 'react-router'
 
 import styles from './styles.module.css';
 
@@ -9,7 +9,7 @@ export class Result extends React.Component {
   }
 
   click(e) {
-    browserHistory.push('/movie/' + this.props.data.id)
+    hashHistory.push('/movie/' + this.props.data.id)
   }
 
   render() {

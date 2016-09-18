@@ -61,7 +61,9 @@ export class Movie extends React.Component {
 
   render() {
     return (
-      <p>Movie</p>
+      <div className={styles.backWrapper}>
+        
+      </div>
     );
   }
 }
