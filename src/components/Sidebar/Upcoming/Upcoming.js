@@ -7,7 +7,14 @@ export class Upcoming extends React.Component {
   }
 
   render() {
-    return ();
+    console.log(this.props.items);
+    return <ul>
+            {
+              this.props.items.map((item) => {
+                return <li>{item.title}</li>;
+              })
+            }
+          </ul>;
   }
 }
 
