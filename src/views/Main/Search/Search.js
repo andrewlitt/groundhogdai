@@ -11,6 +11,7 @@ export class Search extends React.Component {
     return (
         <div className={styles.search}>
           <h1>Type in an upcoming movie to see if it will be a hit!</h1>
+
           <div className={styles.searchBar}>
             <SearchBar />
           </div>

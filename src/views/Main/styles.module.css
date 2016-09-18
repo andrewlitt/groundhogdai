@@ -1,12 +1,21 @@
 .container {
+  position: fixed;
+  top: 75px;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 75px);
+
   display: flex;
   flex-direction: column;
 }
 
+.children {
+  flex: 4;
+  background: red;
+}
+
 .info {
-  flex: 0 1 auto;
+  flex: 1;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

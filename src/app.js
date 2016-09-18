@@ -12,4 +12,5 @@ const routes = makeRoutes();
 
 // Get the node created from the WebPack HTML gen to mount our react app to
 const mountNode = document.querySelector('#root');
+
 ReactDOM.render(<App history={hashHistory} routes={routes} />, mountNode);

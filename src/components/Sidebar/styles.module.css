@@ -2,7 +2,7 @@
 
 .sidebar {
   background: var(--white);
-  width: 50%;
+  flex: 1;
 }
 
 .sidebar h1{

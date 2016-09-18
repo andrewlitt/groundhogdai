@@ -9,7 +9,7 @@ export class About extends React.Component {
 
   render() {
     return (
-        <div className={styles.header}>
+        <div className={styles.about}>
           <h1>Movie Mystic</h1>
         </div>
     );

@@ -18,7 +18,7 @@ class App extends React.Component {
           history={this.props.history}
         />
       </div>
-    );
+    )
   }
 }
 

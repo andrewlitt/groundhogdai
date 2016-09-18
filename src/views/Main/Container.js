@@ -18,22 +18,21 @@ export class Container extends React.Component {
     }
 
     return (
-      <div className={styles.container}>
+      <div>
         <Header />
+        <div className={styles.container}>
+            <div className={styles.children}>
+              {children}
+            </div>
 
-        <div className={styles.flexContainer}>
-          <div className={styles.content}>
-            {children}
-          </div>
-
-          <div className={styles.info}>
+            <div className={styles.info}>
               <Sidebar />
-             <About />
-          </div>
+              <About />
+            </div>
         </div>
       </div>
-     );
-   }
- }
+    );
+  }
+}
 
 export default Container;
