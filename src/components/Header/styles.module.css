@@ -17,8 +17,34 @@
   background: var(--white);
 }
 
-.header h1 {
+.header a:nth-of-type(2) {
   color: var(--main-color);
   font-family:"Bree Serif";
-  font-size: 2.5em;
+  font-size: 2.2em;
+
+  margin-right: 75px;
+  margin-left: 75px;
+}
+
+.header a:nth-of-type(2):hover {
+
+}
+
+.header a:nth-of-type(2):active {
+
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+  font-family:"Open Sans";
+  font-size: 1.2em;
+}
+
+.header a:hover {
+
+}
+
+.header a:active {
+
 }

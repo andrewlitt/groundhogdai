@@ -5,26 +5,30 @@ tr:nth-child(even) {
 }
 table {
     font-family: "Open Sans";
-    font-size: 0.8em;
+    font-size: 1.0em;
     border-collapse: collapse;
     width: 100%;
-    padding: 0;
     margin: 0;
+    background-color: white;
 }
 
 th{
   text-align: center;
 }
 
-#title{
-  text-align: left;
+.title{
+
 }
 
-#date{
-  text-align: center;
+.releaseDate{
+
 }
 
-#rating{
+.revenue{
+  text-align: right;
+}
+
+.rating{
   text-align: right;
 }
 

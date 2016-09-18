@@ -1,18 +1,29 @@
 @import "../../styles/base.css";
 
 .sidebar {
-  background: var(--white);
-  flex: 1;
-}
-
-.sidebar h1{
-  font-size: 1.4em;
-  font-family: "Bree Serif";
-  padding: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--main-color);
 }
 
 .sidebar ul{
   text-decoration: none;
   list-style: none;
   font-family: "Open Sans";
+}
+
+.sidebar h1{
+  font-size: 2.4em;
+  font-family: "Bree Serif";
+  padding: 10px 0px;
+  color: white;
+  text-align: center;
+  font-weight:lighter;
+}
+
+.sidebarContent{
+  width: 70%;
+  padding: 20px;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
+import {hashHistory} from 'react-router';
+import superagent from 'superagent';
 
 // this.props.params.id will have movieID
 // post @ https://image.tmdb.org/t/p/w600_and_h900_bestv2/ + url
@@ -10,7 +12,9 @@ export class Movie extends React.Component {
 
     this.state = {
       toPass: {},
-      data: {}
+      data: {},
+      projectedRevenue: 0,
+      actualRevenue: 0
     }
   }
 
@@ -22,6 +26,9 @@ export class Movie extends React.Component {
     + '?api_key=7d8ffc3db64b7db3a3f44c5cb8a5e9ed').then((result) => {
       result.json().then((json) => {
         temp = {
+          id: this.props.params.id,
+          title: json.title,
+          runtime: json.runtime,
           budget: json.budget,
           popularity: json.popularity,
           vote_average: json.vote_average,
@@ -29,11 +36,14 @@ export class Movie extends React.Component {
         };
 
         tempMovie = {
-          posterLink: json.poster_path,
+          posterLink: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + json.poster_path,
           title: json.title,
           overview: json.overview,
-          releaseDate: json.releaseDate
+          theirRating: json.vote_average,
+          releaseDate: json.release_date
         }
+
+        tempMovie.releaseDate = tempMovie.releaseDate.substring(0,4);
 
         fetch('http://api.themoviedb.org/3/movie/' + this.props.params.id
         + '/credits?api_key=7d8ffc3db64b7db3a3f44c5cb8a5e9ed').then((result) => {
@@ -53,15 +63,52 @@ export class Movie extends React.Component {
 
             this.setState({toPass: temp});
             this.setState({data: tempMovie});
+
+            console.log(this.state.toPass);
+            superagent.post('http://a5b7d24e.ngrok.io/search').send(this.state.toPass).end((err, response, body) => {
+              console.log('Post resonse', response);
+              console.log('Error', err);
+              console.log('Body', body);
+
+              console.log(response.text);
+            });
           });
         });
       });
     });
   }
 
+  backOut(e) {
+    hashHistory.push('/search');
+  }
+
   render() {
     return (
-      <p>Movie</p>
+      <div className={styles.moviePage}>
+        <i
+          className="fa fa-arrow-left"
+          onClick={(e) => this.backOut(e)}
+        />
+
+        <div className={styles.outerLayoutFlex}>
+          <div className={styles.poster}>
+            <img src={this.state.data.posterLink}/>
+          </div>
+
+          <div className={styles.textFlex}>
+            <h1>{this.state.data.title}</h1>
+            <h3>{this.state.data.releaseDate}</h3>
+            <h2>{this.state.data.overview}</h2>
+          </div>
+
+          <div className={styles.ratingFlex}>
+            <p>Our projected revenue for this movie: </p>
+            <h4>{this.state.projectedRevenue}</h4>
+            <p>The actual revenue:</p>
+            <h4>{this.state.actualRevenue}</h4>
+          </div>
+        </div>
+      </div>
     );
   }
 }

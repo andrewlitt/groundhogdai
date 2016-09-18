@@ -14,7 +14,7 @@ export class Sidebar extends React.Component {
   }
 
   componentDidMount() {
-      fetch('http://10.21.227.72:3000/top10').then((result) =>{
+      fetch('http://146.148.60.217/top10').then((result) =>{
         result.json().then(json => {
         //console.log(json);
         this.setState({
@@ -43,8 +43,10 @@ export class Sidebar extends React.Component {
 
   render() {
     return <div className={styles.sidebar}>
-          <h1>Upcoming Movies</h1>
-          <Upcoming items={this.state.movieData} />
+              <div className={styles.sidebarContent}>
+                  <h1>Upcoming Movies</h1>
+                  <Upcoming items={this.state.movieData} />
+              </div>
         </div>;
   }
 }
