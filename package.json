@@ -12,12 +12,14 @@
     "copy:root-windows": "copy .\\app.yaml .\\dist\\app.yaml && copy .\\package.json .\\dist\\package.json",
     "copy": "mkdir -p ./dist/public && npm run copy:root && cp ./src/public/index.html ./dist/public",
     "copy:windows": "md .\\dist\\public && npm run copy:root-windows && copy .\\src\\public\\index.html .\\dist\\public",
-    "start": "node server.bundle.js",
+    "start": "node ./dist/server.bundle.js",
     "start:local": "node ./dist/server.bundle.js",
     "deploy": "npm run clean && npm run copy && npm run build && cd dist && gcloud app deploy -q && cd ..",
     "serve:local": "npm run clean && npm run copy && npm run build && npm run start:local",
     "manMeat": "set NODE_ENV=development && webpack-dev-server --config webpack.client.config.js",
-    "serve:local-windows": "npm run clean && npm run copy:windows && npm run build && npm run start:local"
+    "serve:local-windows": "npm run clean && npm run copy:windows && npm run build && npm run start:local",
+    "dockerize": "docker build -t gcr.io/hackthenorth16-1567/groundhogdai-client:1.0 .",
+    "docker-run": "gcr.io/hackthenorth16-1567/groundhogdai-client:1.0"
   },
   "repository": {
     "type": "git",
