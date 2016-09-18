@@ -7,4 +7,4 @@ With Groundhog you can:
   - Test our ground(h0g) breaking model on past movies to see how well we perform.
   
 ### Tech stack
-React front-end finessed with a spicey express and Azure powered back-end. Also used: 
+React front-end finessed with a spicey express and Azure powered back-end. Also used: Google Cloud Platform, Kubernetes, Docker et more.
