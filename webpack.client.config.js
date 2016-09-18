@@ -31,9 +31,9 @@ var config = hjsConfig({
         // You can add like this intoi the head tag below VVVVVV
         // <link href="https://fonts.googleapis.com/css?family=Open+Sans|Crimson+Text" rel="stylesheet" type="text/css"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         head:'<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Patua+One|Open+Sans" rel="stylesheet">',
-        title: 'Movie Mystic',
+        title: 'Groundhog d.AI',
         metaTags: {
-          'name': 'Movie Mystic',
+          'name': 'Groundhog d.AI',
           'description': 'Predict if movies will be a commerical success.'
         }
       })
