@@ -3,6 +3,7 @@ import {Route, IndexRedirect} from 'react-router';
 
 import Container from './Container';
 import Search from './Search/Search';
+import Movie from './Movie/Movie';
 
 export const mainRoutes = () => {
   return (
