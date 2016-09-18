@@ -66,14 +66,15 @@ export class Movie extends React.Component {
             this.setState({toPass: temp});
             this.setState({data: tempMovie});
 
+            // superagent.post('http://10.21.227.72:3000/search').send(this.state.toPass).end((err, response, body) => {
             superagent.post('http://146.148.60.217/search').send(this.state.toPass).end((err, response, body) => {
               // console.log('Post resonse', response);
               // console.log('Error', err);
               // console.log('Body', body);
 
               let json = JSON.parse(response.text);
-
               let predictedRevenue = 0;
+
               predictedRevenue = Number(json[json.length-1]) + Number(json[json.length-2]);
               this.setState({projectedRevenue: predictedRevenue});
             });
@@ -88,8 +89,6 @@ export class Movie extends React.Component {
   }
 
   render() {
-
-    console.log(this.state.projectedRevenue);
     let actualRevenue =
       <div className="actualRevenue">
         <p>The actual revenue:</p>

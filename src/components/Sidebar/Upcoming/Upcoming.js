@@ -13,7 +13,6 @@ export class Upcoming extends React.Component {
                         <th>Title</th>
                         <th>Release Date</th>
                         <th>Predicted Revenue</th>
-                        <th>Predicted Rating </th>
                     </tr>
                     {
                       this.props.items.map((item) => {
@@ -21,7 +20,6 @@ export class Upcoming extends React.Component {
                                   <td className={styles.title}>{item.title}</td>
                                   <td className={styles.releaseDate}>{item.releaseDate}</td>
                                   <td className={styles.revenue}>${item.revenue}</td>
-                                  <td className={styles.rating}>%</td>
                                </tr>;
                       })
                     }
