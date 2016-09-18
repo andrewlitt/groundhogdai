@@ -10,7 +10,7 @@ export class Header extends React.Component {
   render() {
     return (
         <div className={styles.header}>
-          <h1>Movie Mystic</h1>
+          <h1>Groundhog d.AI</h1>
         </div>
     );
   }
