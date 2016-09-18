@@ -7,7 +7,9 @@ export class Upcoming extends React.Component {
   }
 
   render() {
-    return ();
+    return (
+      <p>test</p>
+    );
   }
 }
 
