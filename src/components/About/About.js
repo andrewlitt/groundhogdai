@@ -12,8 +12,14 @@ export class About extends React.Component {
         <div className={styles.about}>
           <h1>What is Groundhog d.AI?</h1>
           <div className={styles.aboutContent}>
-              <p>Here we have to write a little blurb about our site.</p>
-              <p>It will touch on technical details, funny shit, and other cool stuff.</p>
+            <p>
+              Groundhog d.AI is an Azure-cloud-powered, mobile-un-ready, online only, ReactJS powered movie artificial intelligence.
+
+              With Groundhog you can:
+            </p>
+            <p>
+              Predict whether future movies will be box office successes and test our ground(h0g) breaking model on past movies to see how well we perform.            
+            </p>
           </div>
         </div>
     );
