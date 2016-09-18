@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles.module.css';
 import {hashHistory} from 'react-router';
+import numeral from 'numeral';
 import superagent from 'superagent';
 
 // this.props.params.id will have movieID
@@ -37,6 +38,7 @@ export class Movie extends React.Component {
 
         tempMovie = {
           posterLink: 'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + json.poster_path,
+          revenue: json.revenue,
           title: json.title,
           overview: json.overview,
           theirRating: json.vote_average,
@@ -64,13 +66,16 @@ export class Movie extends React.Component {
             this.setState({toPass: temp});
             this.setState({data: tempMovie});
 
-            console.log(this.state.toPass);
-            superagent.post('http://a5b7d24e.ngrok.io/search').send(this.state.toPass).end((err, response, body) => {
-              console.log('Post resonse', response);
-              console.log('Error', err);
-              console.log('Body', body);
+            superagent.post('http://146.148.60.217/search').send(this.state.toPass).end((err, response, body) => {
+              // console.log('Post resonse', response);
+              // console.log('Error', err);
+              // console.log('Body', body);
 
-              console.log(response.text);
+              let json = JSON.parse(response.text);
+
+              let predictedRevenue = 0;
+              predictedRevenue = Number(json[json.length-1]) + Number(json[json.length-2]);
+              this.setState({projectedRevenue: predictedRevenue});
             });
           });
         });
@@ -83,6 +88,19 @@ export class Movie extends React.Component {
   }
 
   render() {
+
+    console.log(this.state.projectedRevenue);
+    let actualRevenue =
+      <div className="actualRevenue">
+        <p>The actual revenue:</p>
+        <h4>{numeral(this.state.data.revenue).format('($ 0.00 a)')}</h4>
+      </div>
+    ;
+
+    if(this.state.data.revenue === 0) {
+      actualRevenue = '';
+    }
+
     return (
       <div className={styles.moviePage}>
         <i
@@ -103,9 +121,9 @@ export class Movie extends React.Component {
 
           <div className={styles.ratingFlex}>
             <p>Our projected revenue for this movie: </p>
-            <h4>{this.state.projectedRevenue}</h4>
-            <p>The actual revenue:</p>
-            <h4>{this.state.actualRevenue}</h4>
+            <h4>{numeral(this.state.projectedRevenue).format('($ 0.00 a)')}</h4>
+
+            {actualRevenue}
           </div>
         </div>
       </div>
